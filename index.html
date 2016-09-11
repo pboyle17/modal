@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    button {
+      box-shadow: 10px 10px 5px #888888;
+    }
+
+  .modal {
+      height:100%;
+      width:100%;
+      background-color:rgba(0, 0, 0, 0.5);
+      position:absolute;
+      top:0;
+      left:0;
+    }
+
+    body{
+      margin:0;
+    }
+  </style>
+</head>
+<body>
+  <button id='button'>
+    Click Here!
+  </button>
+  <script>
+    var $button = document.getElementById('button');
+    $button.addEventListener('click',()=>{
+      showModal();
+      console.log('clicked');
+    });
+
+    var showModal = function(){
+      let $modal = document.createElement('div');
+      $modal.classList.add('modal');
+
+      document.body.appendChild($modal);
+    };
+
+  </script>
+</body>
+</html>
